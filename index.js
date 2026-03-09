@@ -134,7 +134,7 @@ async function sendMessage(to, text) {
 }
 
 // ─── Start ─────────────────────────────────────────────────────────────────────
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`✅ WhatsApp AI Bot running on port ${PORT}`);
     console.log(`🔗 Webhook: /webhook`);
     console.log(`🔑 Verify Token: ${process.env.WEBHOOK_VERIFY_TOKEN}`);
