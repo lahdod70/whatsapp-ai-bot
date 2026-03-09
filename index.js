@@ -14,8 +14,8 @@ app.use(express.json());
 // ─── Configuration ────────────────────────────────────────────────────────────
 const CONFIG = {
   PORT             : process.env.PORT || 8080,
-  VERIFY_TOKEN     : process.env.VERIFY_TOKEN     || 'lahdod_webhook_2024',
-  WA_TOKEN         : process.env.WA_TOKEN,
+  VERIFY_TOKEN     : process.env.WEBHOOK_VERIFY_TOKEN || process.env.VERIFY_TOKEN || 'lahdod_webhook_2024',
+  WA_TOKEN         : process.env.WHATSAPP_ACCESS_TOKEN || process.env.WA_TOKEN,
   PHONE_NUMBER_ID  : process.env.PHONE_NUMBER_ID,
   GEMINI_API_KEY   : process.env.GEMINI_API_KEY,
 };
